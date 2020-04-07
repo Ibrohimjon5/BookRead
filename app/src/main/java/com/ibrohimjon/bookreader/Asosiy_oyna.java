@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.ibrohimjon.bookreader.Asosiy.Frag_asosiy;
+import com.ibrohimjon.bookreader.Music.Frag_music;
 import com.ibrohimjon.bookreader.R;
 
 public class Asosiy_oyna extends AppCompatActivity {
@@ -26,7 +27,12 @@ public class Asosiy_oyna extends AppCompatActivity {
         btn_music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                btn_asosiy.setBackgroundResource(R.color.colorPrimaryDark);
+                btn_video.setBackgroundResource(R.color.colorPrimaryDark);
+                btn_music.setBackgroundResource(R.color.colorPrimary);
+                float x = btn_music.getX();
+                Frag_music asosiy = new Frag_music();
+                Oyna_ozgar(asosiy, x);
             }
         });
 

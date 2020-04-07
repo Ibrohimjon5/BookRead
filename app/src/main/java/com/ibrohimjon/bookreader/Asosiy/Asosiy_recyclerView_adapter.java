@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ibrohimjon.bookreader.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -42,7 +43,9 @@ public class Asosiy_recyclerView_adapter extends RecyclerView.Adapter<Asosiy_rec
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
         holder.txt_nomi.setText(mData.get(position).getNomi());
-        holder.image_kitob.setImageResource(R.drawable.icon_rich_dad);
+//        holder.image_kitob.setImageResource(R.drawable.icon_rich_dad);
+        Picasso.with(mContext).load(mData.get(position).getImage_url()).resize(350, 500).into(holder.image_kitob);
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
