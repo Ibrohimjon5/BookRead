@@ -107,13 +107,13 @@ public class Frag_asosiy extends Fragment {
                                         if (!s.equals("")) {
                                             try {
                                                 String[] tovar = s.split("\\^");
-                                                if (tovar.length > 2) {
+                                                if (tovar.length > 4) {
                                                     String id = tovar[0];
                                                     String nomi = tovar[1].replace("'", "`").replace("\"", "`").replace("\n", " ");
                                                     String categ_id = tovar[2];
                                                     String izox = tovar[3];
-                                                    String rasm = tovar[3];
-                                                    String yuklandi = tovar[3];
+                                                    String rasm = tovar[4];
+                                                    String yuklandi = tovar[5];
 
                                                     asosiy_list.add(new Asosiy_list(id, nomi, categ_id, izox, rasm, yuklandi));
                                                 }

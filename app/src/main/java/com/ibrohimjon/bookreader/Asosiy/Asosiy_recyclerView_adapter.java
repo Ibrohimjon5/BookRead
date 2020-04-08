@@ -1,7 +1,6 @@
 package com.ibrohimjon.bookreader.Asosiy;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ibrohimjon.bookreader.R;
+import com.ibrohimjon.bookreader.Splash;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -44,7 +44,7 @@ public class Asosiy_recyclerView_adapter extends RecyclerView.Adapter<Asosiy_rec
 
         holder.txt_nomi.setText(mData.get(position).getNomi());
 //        holder.image_kitob.setImageResource(R.drawable.icon_rich_dad);
-        Picasso.with(mContext).load(mData.get(position).getImage_url()).resize(350, 500).into(holder.image_kitob);
+        Picasso.with(mContext).load(Splash.tz_r() + mData.get(position).getImage_url()).into(holder.image_kitob);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
