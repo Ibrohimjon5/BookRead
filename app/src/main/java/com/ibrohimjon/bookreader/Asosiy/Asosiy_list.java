@@ -7,14 +7,16 @@ public class Asosiy_list {
     private String Category;
     private String Description;
     private String Image_url;
+    private String Book_url;
     private String Yuklandi;
 
-    public Asosiy_list(String id, String nomi, String category, String description, String image_url, String yuklandi) {
+    public Asosiy_list(String id, String nomi, String category, String description, String image_url, String book_url, String yuklandi) {
         Id = id;
         Nomi = nomi;
         Category = category;
         Description = description;
         Image_url = image_url;
+        Book_url = book_url;
         Yuklandi = yuklandi;
     }
 
@@ -56,6 +58,14 @@ public class Asosiy_list {
 
     public void setImage_url(String image_url) {
         Image_url = image_url;
+    }
+
+    public String getBook_url() {
+        return Book_url;
+    }
+
+    public void setBook_url(String book_url) {
+        Book_url = book_url;
     }
 
     public String getYuklandi() {

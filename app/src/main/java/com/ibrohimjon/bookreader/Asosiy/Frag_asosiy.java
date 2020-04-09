@@ -47,6 +47,7 @@ public class Frag_asosiy extends Fragment {
         } else {
             get_data.execute();
         }
+
         return view;
     }
 
@@ -113,9 +114,10 @@ public class Frag_asosiy extends Fragment {
                                                     String categ_id = tovar[2];
                                                     String izox = tovar[3];
                                                     String rasm = tovar[4];
-                                                    String yuklandi = tovar[5];
+                                                    String kitob = tovar[5];
+                                                    String yuklandi = tovar[6];
 
-                                                    asosiy_list.add(new Asosiy_list(id, nomi, categ_id, izox, rasm, yuklandi));
+                                                    asosiy_list.add(new Asosiy_list(id, nomi, categ_id, izox, rasm, kitob, yuklandi));
                                                 }
                                             } catch (Exception e) {
                                                 XATOLIK_YOZISH(e);
